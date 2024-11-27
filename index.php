@@ -7,7 +7,7 @@
 </head>
 <body>
     Esta es mi página web. Stalin Vasco prueba con load balancer
-    <h2>Mi ip es: <?php echo $_SERVER['SERVER_ADDR']; ?></h2>
+    <h2>Mi direccion ip es: <?php echo $_SERVER['SERVER_ADDR']; ?></h2>
   
 </body>
 </html>
