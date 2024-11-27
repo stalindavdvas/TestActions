@@ -6,23 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    Esta es mi página web. Stalin Vasco prueba 1
+    Esta es mi página web. Stalin Vasco prueba 2
     <h2>Hola Mundo desde $(hostname -f)</h2>
-    <p>La IP de esta instancia es: <span id="instance-ip"></span></p>
-
-    <script>
-        // Realizar una petición GET a la metadata de la instancia
-        fetch('http://169.254.169.254/latest/meta-data/local-ipv4')
-            .then(response => response.text())
-            .then(ip => {
-                // Mostrar la IP en el elemento HTML con el id "instance-ip"
-                document.getElementById('instance-ip').textContent = ip;
-            })
-            .catch(error => {
-                console.error('Error al obtener la IP de la instancia:', error);
-            });
-    </script>
-    <script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
   
 </body>
 </html>
