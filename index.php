@@ -8,6 +8,7 @@
 <body>
     Esta es mi página web. Stalin Vasco prueba con load balancer ALB
     <h2>Mi ip es: <?php echo $_SERVER['SERVER_ADDR']; ?></h2>
+    <p>El hostname de esta instancia es: <?php echo gethostname(); ?></p>
   
 </body>
 </html>
