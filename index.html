@@ -8,5 +8,14 @@
 <body>
     Esta es mi página web. Stalin Vasco prueba 1
     <h2>Hola Mundo desde $(hostname -f)</h2>
+    Mi IP es: <strong id="ipId"></strong>
+
+    <script type="text/javascript">
+        function get_ip(obj){
+            document.getElementById('ipId').innerHTML = obj.ip;
+        }
+    </script>
+    <script type="text/javascript" src="https://api.ipify.org/?format=jsonp&callback=get_ip"></script>
+  
 </body>
 </html>
