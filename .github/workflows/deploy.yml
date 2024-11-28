@@ -75,12 +75,13 @@ jobs:
             sudo systemctl start apache2
             sudo systemctl enable apache2
             
+            # Elimina archivos antiguos en el directorio de Apache
+            sudo rm -rf /var/www/html/*
+            
             # Cambia al directorio donde están tus archivos clonados
             cd /home/${{ secrets.USERNAME }}/{{ secrets.TARGET_DIR }}
             
-            # Mueve todos los archivos al directorio de Apache
-            sudo mv * /var/www/html
-            
+           
             # Cambia los permisos para que Apache pueda acceder a los archivos
             sudo chown -R www-data:www-data /var/www/html
             sudo chmod -R 755 /var/www/html
@@ -117,12 +118,13 @@ jobs:
             sudo apt-get install -y php libapache2-mod-php
             sudo systemctl start apache2
             sudo systemctl enable apache2
+            # Elimina archivos antiguos en el directorio de Apache
+            sudo rm -rf /var/www/html/*
             
             # Cambia al directorio donde están tus archivos clonados
             cd /home/${{ secrets.USERNAME }}/{{ secrets.TARGET_DIR }}
             
-            # Mueve todos los archivos al directorio de Apache
-            sudo mv * /var/www/html
+            
             
             # Cambia los permisos para que Apache pueda acceder a los archivos
             sudo chown -R www-data:www-data /var/www/html
@@ -159,12 +161,12 @@ jobs:
             sudo apt-get install -y php libapache2-mod-php
             sudo systemctl start apache2
             sudo systemctl enable apache2
+            # Elimina archivos antiguos en el directorio de Apache
+            sudo rm -rf /var/www/html/*
             
             # Cambia al directorio donde están tus archivos clonados
             cd /home/${{ secrets.USERNAME }}/{{ secrets.TARGET_DIR }}
-            
-            # Mueve todos los archivos al directorio de Apache
-            sudo mv * /var/www/html
+           
             
             # Cambia los permisos para que Apache pueda acceder a los archivos
             sudo chown -R www-data:www-data /var/www/html
