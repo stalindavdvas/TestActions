@@ -39,6 +39,9 @@ jobs:
             # Cambia al directorio donde están tus archivos clonados
             cd /home/${{ secrets.USERNAME }}/{{ secrets.TARGET_DIR }}
             
+            # Borra el contenido
+            sudo rm -rf /var/www/html/*
+            
             # Mueve todos los archivos al directorio de Apache
             sudo mv * /var/www/html
             
