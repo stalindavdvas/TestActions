@@ -36,6 +36,9 @@ jobs:
             sudo systemctl start apache2
             sudo systemctl enable apache2
             
+            # Elimina archivos antiguos en el directorio de Apache
+            sudo rm -rf /var/www/html/*
+            
             # Cambia al directorio donde están tus archivos clonados
             cd /home/${{ secrets.USERNAME }}/{{ secrets.TARGET_DIR }}
             
